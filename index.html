@@ -7,21 +7,27 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <title>Main</title>
   <style>body { padding: 0; margin: 0; }</style>
+  <script src="main.js"></script>
 </head>
 
 <body>
 
 <script>
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('service_worker.js').then(function(registration) {
-			console.log('ServiceWorker registration successful with scope: ', registration.scope);
-		}).catch(function(err) {
-			console.log('ServiceWorker registration failed: ', err);
-		});
-	}
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service_worker.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }
 </script>
 
-<script src="index.js"></script>
+<div id="elm"></div>
+<script>
+var app = Elm.Main.init({
+  node: document.getElementById('elm')
+});
+</script>
 
 <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
 integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
