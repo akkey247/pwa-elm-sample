@@ -2,7 +2,7 @@
     "short_name": "PWAサンプル",
     "name": "PWAサンプルアプリ",
     "display": "standalone",
-    "start_url": "/",
+    "start_url": "/pwa-elm-sample/",
     "icons": [
         {
             "src": "images/icon_512x512.jpg",

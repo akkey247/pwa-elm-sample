@@ -1,5 +1,5 @@
 // キャッシュ名とキャッシュファイルの指定
-var CACHE_NAME = 'pwa-sample-caches';
+var CACHE_NAME = 'pwa-elm-sample-caches';
 var urlsToCache = [
     '/akkey247.github.io/',
 ];
